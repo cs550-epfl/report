@@ -1,0 +1,84 @@
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fontspec}
+%\setmonofont[Scale=0.88]{Cascadia Code}
+
+\lstdefinelanguage{CUDA}{
+  language=C++,
+  morekeywords={
+    __global__, __device__, __host__, __shared__, __constant__,
+    __inline__, __forceinline__,
+    __syncthreads,
+    threadIdx, blockIdx, blockDim, gridDim, warpSize
+  },
+  deletekeywords={int, float, double, char, bool, void, size_t},
+  morekeywords=[2]{
+    int, float, double, char, bool, void, size_t,
+    uint32_t
+  },
+  sensitive=true
+}
+
+\lstset{
+  language=CUDA,                      % use CUDA language definition
+  basicstyle=\footnotesize\ttfamily,  % use monospaced font
+  keywordstyle=\color{blue}\bfseries, % keywords in bold blue
+  keywordstyle=[2]\color{violet},     % types in violet
+  commentstyle=\color{gray},          % comments in gray
+  stringstyle=\color{red},            % strings in red
+  numberstyle=\tiny\ttfamily\color{gray}, % line numbers in tiny gray font
+  numbers=left,                       % line numbers on the left
+  stepnumber=1,                       % line numbers step
+  numbersep=10pt,                     % space between code and line numbers
+  showspaces=false,                   % do not show spaces
+  showstringspaces=false,             % do not show space in strings
+  breaklines=false,                   % line breaks if the line is too long
+  captionpos=b,                       % position of the caption (bottom)
+  frame=single,                       % frame the code block
+  tabsize=4,                          % tab size of 4 spaces
+  frame=topbottom,
+  backgroundcolor=\color{white},      % background color
+}
+
+\lstdefinelanguage{PTX}{
+  language=C++, % PTX syntax is somewhat similar to C++
+  morekeywords={
+    .entry, .func, .reg, .global, .local, .param, .shared, .const,
+    .s32, .u32, .s64, .u64, .f32, .f64, .b8, .b16, .b32, .b64,
+    .pred, .texref, .samplerref, .surfref,
+    ld, st, mov, add, sub, mul, div, rem, and, or, xor, not,
+    shl, shr, bra, call, ret, bar, atom, ldg, stg, cvta, cvt,
+    selp, setp, slct, mad, min, max, abs, neg, rcp, sqrt, rsqrt,
+    sin, cos, lg2, ex2, tanh, rcp64h, rsqrt64h, ex2, lg2,
+    tex, tld4, txq, suld, sust, sured, suq, suldb, sustb, suredb,
+    vote, activemask, lanemask, shfl, prmt, bar, fence,
+    threadIdx, blockIdx, blockDim, gridDim, warpSize
+  },
+  deletekeywords={int, float, double, char, bool, void, size_t},
+  morekeywords=[2]{
+    int, float, double, char, bool, void, size_t,
+    uint32_t
+  },
+  sensitive=true
+}
+
+\lstset{
+  language=PTX,                       % use PTX language definition
+  basicstyle=\footnotesize\ttfamily,  % use monospaced font
+  keywordstyle=\color{blue}\bfseries, % keywords in bold blue
+  keywordstyle=[2]\color{violet},     % types in violet
+  commentstyle=\color{gray},          % comments in gray
+  stringstyle=\color{red},            % strings in red
+  numberstyle=\tiny\ttfamily\color{gray}, % line numbers in tiny gray font
+  numbers=left,                       % line numbers on the left
+  stepnumber=1,                       % line numbers step
+  numbersep=10pt,                     % space between code and line numbers
+  showspaces=false,                   % do not show spaces
+  showstringspaces=false,             % do not show space in strings
+  breaklines=false,                   % line breaks if the line is too long
+  captionpos=b,                       % position of the caption (bottom)
+  frame=single,                       % frame the code block
+  tabsize=4,                          % tab size of 4 spaces
+  frame=topbottom,
+  backgroundcolor=\color{white},      % background color
+}

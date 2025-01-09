@@ -1,0 +1,149 @@
+@misc{gpubar,
+author={{Yue Yu, Boran Xu, Wuyue Sun}},
+title={{Supplementary material}},
+howpublished={\url{https://github.com/cs550-epfl/gpubar}},
+note={Last accessed: 2024-01-05}
+}
+
+
+@misc{cuda,
+author={{NVIDIA}},
+title={{CUDA C++ Programming Guide}},
+howpublished={\url{https://docs.nvidia.com/cuda/cuda-c-programming-guide/}},
+year={2024},
+note={Last accessed: 2024-12-27}
+}
+
+@misc{ptx,
+author={{NVIDIA}},
+title={{Parallel Thread Execution ISA Version 8.5}},
+howpublished={\url{https://docs.nvidia.com/cuda/parallel-thread-execution/}},
+year={2024},
+note={Last accessed: 2024-12-27}
+}
+
+@misc{h100,
+author={{NVIDIA}},
+title={{NVIDIA H100 Tensor Core GPU Architecture}},
+howpublished={\url{https://resources.nvidia.com/en-us-tensor-core}},
+year={2022},
+note={Last accessed: 2024-12-27}
+}
+
+@misc{trt-llm,
+author={{NVIDIA}},
+title={{TensorRT-LLM: A TensorRT Toolbox for Optimized Large Language Model Inference}},
+year={2023},
+howpublished={\url{https://github.com/NVIDIA/TensorRT-LLM}},
+note={Last accessed: 2024-12-27}
+}
+
+@misc{nccl,
+author={{NVIDIA}},
+title={{NCCL: Optimized primitives for inter-GPU communication}},
+year={2015},
+howpublished={\url{https://github.com/NVIDIA/nccl}},
+note={Last accessed: 2024-12-27}
+}
+
+@misc{customallreduce,
+author={Anton Korzh and Brian Pharris and Nick Comly and Ashraf Eassa and Amr Elmeleegy},
+title={{3x Faster AllReduce with NVSwitch and TensorRT-LLM MultiShot}},
+howpublished={\url{https://developer.nvidia.com/blog/3x-faster-allreduce-with-nvswitch-and-tensorrt-llm-multishot/}},
+year={2024},
+note={Last accessed: 2024-12-27}
+}
+
+@misc{dgx,
+author={{NVIDIA}},
+title={{NVIDIA DGX Platform}},
+howpublished={\url{https://www.nvidia.com/en-us/data-center/dgx-platform/}},
+note={Last accessed: 2024-12-27}
+}
+
+@misc{gdp2p,
+author={{NVIDIA}},
+title={{GPUDirect}},
+howpublished={\url{https://developer.nvidia.com/gpudirect}},
+note={Last accessed: 2024-12-30}
+}
+
+@inproceedings{nvswitch,
+  author={Ishii, Alexander and Wells, Ryan},
+  booktitle={2022 IEEE Hot Chips 34 Symposium (HCS)}, 
+  title={The NVLink-Network Switch: NVIDIA’s Switch Chip for High Communication-Bandwidth Superpods}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-23},
+  keywords={Switches;History},
+  doi={10.1109/HCS55958.2022.9895480}
+}
+
+@misc{nvl32,
+author={Harry Petty and Ivan Goldwasser and Pradyumna Desale},
+title={{One Giant Superchip for LLMs, Recommenders, and GNNs: Introducing NVIDIA GH200 NVL32}},
+year={2023},
+howpublished={\url{https://developer.nvidia.com/blog/one-giant-superchip-for-llms-recommenders-and-gnns-introducing-nvidia-gh200-nvl32/}},
+note={Last accessed: 2024-12-31}
+}
+
+@misc{nvl36-72,
+author={Ivan Goldwasser and Harry Petty and Pradyumna Desale and Kirthi Devleker},
+title={{NVIDIA GB200 NVL72 Delivers Trillion-Parameter LLM Training and Real-Time Inference}},
+year={2024},
+howpublished={\url{https://developer.nvidia.com/blog/nvidia-gb200-nvl72-delivers-trillion-parameter-llm-training-and-real-time-inference/}},
+note={Last accessed: 2024-12-31}
+}
+
+@misc{computex,
+author={{NVIDIA}},
+title={{NVIDIA CEO Jensen Huang Keynote at COMPUTEX 2024}},
+year={2024},
+howpublished={\url{https://www.youtube.com/watch?v=pKXDVsWZmUU}},
+note={Last accessed: 2024-12-31}
+}
+
+@misc{unified-analysis,
+author = {Tong, Haining and Gavrilenko, Natalia and Ponce de Le\'on, Hern\'an and Heljanko, Keijo},
+title = {{Towards Unified Analysis of GPU Consistency}},
+year = {2024},
+howpublished = {\url{https://hernanponcedeleon.github.io/pdfs/asplos2024.pdf}},
+note = {Last accessed: 2024-10-31}
+}
+
+@inproceedings{rc11,
+author = {Lahav, Ori and Vafeiadis, Viktor and Kang, Jeehoon and Hur, Chung-Kil and Dreyer, Derek},
+title = {{Repairing sequential consistency in C/C++11}},
+year = {2017},
+isbn = {9781450349888},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3062341.3062352},
+doi = {10.1145/3062341.3062352},
+abstract = {The C/C++11 memory model defines the semantics of concurrent memory accesses in C/C++, and in particular supports racy "atomic" accesses at a range of different consistency levels, from very weak consistency ("relaxed") to strong, sequential consistency ("SC"). Unfortunately, as we observe in this paper, the semantics of SC atomic accesses in C/C++11, as well as in all proposed strengthenings of the semantics, is flawed, in that (contrary to previously published results) both suggested compilation schemes to the Power architecture are unsound. We propose a model, called RC11 (for Repaired C11), with a better semantics for SC accesses that restores the soundness of the compilation schemes to Power, maintains the DRF-SC guarantee, and provides stronger, more useful, guarantees to SC fences. In addition, we formally prove, for the first time, the correctness of the proposed stronger compilation schemes to Power that preserve load-to-store ordering and avoid "out-of-thin-air" reads.},
+booktitle = {Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+pages = {618–632},
+numpages = {15},
+keywords = {C++11, Weak memory models, declarative semantics, sequential consistency},
+location = {Barcelona, Spain},
+series = {PLDI 2017}
+}
+
+@inproceedings{ptx-mcm,
+author = {Lustig, Daniel and Sahasrabuddhe, Sameer and Giroux, Olivier},
+title = {{A Formal Analysis of the NVIDIA PTX Memory Consistency Model}},
+year = {2019},
+isbn = {9781450362405},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3297858.3304043},
+doi = {10.1145/3297858.3304043},
+abstract = {This paper presents the first formal analysis of the official memory consistency model for the NVIDIA PTX virtual ISA. Like other GPU memory models, the PTX memory model is weakly ordered but provides scoped synchronization primitives that enable GPU program threads to communicate through memory. However, unlike some competing GPU memory models, PTX does not require data race freedom, and this results in PTX using a fundamentally different (and more complicated) set of rules in its memory model. As such, PTX has a clear need for a rigorous and reliable memory model testing and analysis infrastructure. We break our formal analysis of the PTX memory model into multiple steps that collectively demonstrate its rigor and validity. First, we adapt the English language specification from the public PTX documentation into a formal axiomatic model. Second, we derive an up-to-date presentation of an OpenCL-like scoped C++ model and develop a mapping from the synchronization primitives of that scoped C++ model onto PTX. Third, we use the Alloy relational modeling tool to empirically test the correctness of the mapping. Finally, we compile the model and mapping into Coq and build a full machine-checked proof that the mapping is sound for programs of any size. Our analysis demonstrates that in spite of issues in previous generations, the new NVIDIA PTX memory model is suitable as a sound compilation target for GPU programming languages such as CUDA.},
+booktitle = {Proceedings of the Twenty-Fourth International Conference on Architectural Support for Programming Languages and Operating Systems},
+pages = {257–270},
+numpages = {14},
+keywords = {theorem proving, model finding, memory consistency models, SAT solving, GPUs},
+location = {Providence, RI, USA},
+series = {ASPLOS '19}
+}
